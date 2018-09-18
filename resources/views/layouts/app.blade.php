@@ -74,6 +74,13 @@
         <main class="py-4">
             @yield('content')
         </main>
+
+        <footer>
+            <div style="height:5rem; width:100%; background-color: black">
+                <h3 style="color:white; text-align: center; line-height: 5rem">Todos los derechos reservados Atilio Rodriguez.</h3>
+            </div>
+        </footer>
+
     </div>
 </body>
 </html>
