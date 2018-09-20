@@ -17,6 +17,12 @@ Route::get('/', function () {
 
 Route::get('/productos', 'ProductController@index')->name('products');
 
+Route::get('/productos/{query}', [
+
+	'uses' => 'ProductController@searchProduct',
+	'as' => 'searchProducts'
+]);
+
 
 Auth::routes();
 

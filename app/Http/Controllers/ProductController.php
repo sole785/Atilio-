@@ -16,6 +16,18 @@ class ProductController extends Controller
 		
 	}
 
+	public function searchProduct(Request $request) {
+
+		$productName = $request->input('productName');
+
+		
+		$selectedProducts = Product::where('detalle', 'LIKE', '%'.$productName.'%')->get();
+
+		return view('products', ['products' => $selectedProducts]);
+		
+
+	}
+
 	
 
 

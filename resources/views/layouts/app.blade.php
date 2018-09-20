@@ -42,6 +42,11 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
+                                
+                                <a class="nav-link" href="{{route('products')}}" title="">Productos</a>
+                            </li>
+
+                            <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Ingresar') }}</a>
                             </li>
                             <li class="nav-item">

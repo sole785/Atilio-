@@ -20,6 +20,25 @@
 			<h1 class="text-center">Listado de productos</h1>
 		</div>
 
+		<div class="row">
+
+			<div class="container">
+				
+				<form action="{{route('searchProducts', ['$query' => 'productName'])}}" method="get" accept-charset="utf-8">
+				
+					<div class="form-group">
+						<input type="text" name="productName" placeholder="Nombre del producto." class="form-control">
+						
+					</div>
+
+					<input type="submit" name="" class="btn btn-primary btn-block" value="Buscar producto">
+				</form>
+
+			</div>
+		</div>
+
+		
+
 		@if (Auth::check())
 			
 			<div class="row">
