@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Recuperar contraseña') }}</div>
+                <div class="alert alert-dark text-center"> <strong>{{ __('Recuperar contraseña') }}</strong></div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -47,7 +47,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-secondary">
                                     {{ __('Cambiar Contraseña') }}
                                 </button>
                             </div>

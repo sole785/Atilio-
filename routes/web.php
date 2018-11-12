@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+/*router::get('/importar', 'ImportController@import')->name('Importar');*/
+/*Route::post('/import-excel', 'ExcelController@importFile')->name('import');*/
+
 Route::get('/productos', 'ProductController@index')->name('products');
 
 Route::get('/productos/{query}', [
@@ -28,3 +31,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::post('/import-excel', 'ExcelController@index')->name('importar');

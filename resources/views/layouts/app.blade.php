@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Atilio') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -22,14 +22,15 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <nav class="navbar navbar-expand-sm bg-secondary navbar-dark">
+        <!--<nav class="navbar navbar-expand-md navbar-light navbar-laravel">-->
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+               <!-- <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Atilio D') }}
-                </a>
+                </a> 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
-                </button>
+                </button>-->
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
@@ -37,25 +38,44 @@
 
                     </ul>
 
+                 
+
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <!---  <ul class="navbar-nav ml-auto">  -->
+                    <ul class="navbar-nav">
                         <!-- Authentication Links -->
                         @guest
-                            <li class="nav-item">
-                                
-                                <a class="nav-link" href="{{route('products')}}" title="">Productos</a>
+                           <!-- <li class="nav-item">-->
+                           
+
+                            <li class="nav-item active">    
+                                <a class="nav-link" href="{{route('products')}}" title=""><strong>Productos</strong></a>
                             </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Ingresar') }}</a>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{{ route('login') }}" title=""><strong>Ingresar</strong></a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Registrarme') }}</a>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{{ route('register') }}" title=""><strong>Registrarme</strong></a>
                             </li>
                         @else
+
+
+                            @if(Auth::user()->type == 'admin')
+                                <li class="nav-item active">    
+                                    <a class="nav-link" href="{{route('importar')}}" title=""><strong>Cargar Archivo</strong></a>
+
+                                </li>
+                            @endif
+
+
+                            <li class="nav-item active">
+                                
+                                <a class="nav-link" href="{{route('products')}}" title=""><strong>Productos<strong></a>
+                            </li>
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle active" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                   <strong> {{ Auth::user()->name }}<strong> <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -69,6 +89,11 @@
                                         @csrf
                                     </form>
                                 </div>
+
+                        
+                                    
+                                   
+                                
                             </li>
                         @endguest
                     </ul>
@@ -81,8 +106,8 @@
         </main>
 
         <footer>
-            <div style="height:5rem; width:100%; background-color: black">
-                <h3 style="color:white; text-align: center; line-height: 5rem">Todos los derechos reservados Atilio Rodriguez.</h3>
+            <div style="height:3rem; width:100%; background-color: black">
+                <h3 style="color:white; text-align: center; line-height: 3rem">Todos los derechos reservados Atilio Dominguez.</h3>
             </div>
         </footer>
 

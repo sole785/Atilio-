@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Atilio'),
 
     /*
     |--------------------------------------------------------------------------
@@ -124,6 +124,8 @@ return [
         /*
          * Laravel Framework Service Providers...
          */
+       /* 'Maatwebsite\Excel\ExcelServiceProvider',*/
+        Maatwebsite\Excel\ExcelServiceProvider::class,
         Illuminate\Auth\AuthServiceProvider::class,
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
         Illuminate\Bus\BusServiceProvider::class,
@@ -174,6 +176,9 @@ return [
     */
 
     'aliases' => [
+        
+       /* 'Excel' => 'Maatwebsite\Excel\Facades\Excel',*/
+
 
         'App' => Illuminate\Support\Facades\App::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
@@ -208,6 +213,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
 
     ],
 
