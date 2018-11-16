@@ -15,7 +15,7 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $table->increments('active');
+            $table->boolean('isActive') ->default(false);
             $table->string('name');
             $table->integer('cuit')->unique();
             $table->string('razon_social');

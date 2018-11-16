@@ -32,3 +32,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/import-excel', 'ExcelController@index')->name('importar');
+
+Route::get('/mail', 'MailController@index')->name('mail');

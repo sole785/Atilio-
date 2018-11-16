@@ -28,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/productos';
+    protected $redirectTo = '/productos'; //redireccionar a /mail cuando se solucione el problema del registro
 
     /**
      * Create a new controller instance.
