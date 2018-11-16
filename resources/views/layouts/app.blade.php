@@ -106,8 +106,9 @@
         </main>
 
         <footer>
-            <div style="height:3rem; width:100%; background-color: black">
-                <h3 style="color:white; text-align: center; line-height: 3rem">Todos los derechos reservados Atilio Dominguez.</h3>
+            <div style="height:9rem; width:100%; background-color: black">
+                <h3 style="color:white; text-align: center; line-height: 3rem">DON BOSCO 458 - MENDOZA.<br> Teléfonos: 4238038/4202472<br>E-mail: dominguezatilio@speedy.com.ar</h3>
+
             </div>
         </footer>
 
