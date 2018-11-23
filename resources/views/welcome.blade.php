@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Atilio Dominguez</title>
+        <title>Laravel</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -67,13 +67,10 @@
     <body>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
-               <div class="top-right links"> 
-                
-                        <a href="{{ route('products') }}" title=""><strong>Productos</strong></a>
-                       
+                <div class="top-right links">
+                        <a href="{{ route('products') }}" title="">Productos</a>
                     @auth
                         <a href="{{ url('/home') }}">Inicio</a>
-                        <a href="{{ route('importar') }}" title=""><strong>Cargar Archivo</strong></a>
                     @else
                         <a href="{{ route('login') }}">Ingresar</a>
                         <a href="{{ route('register') }}">Registrarme</a>
@@ -83,12 +80,16 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                   <div class="row">
-                        <img class="img-fluid mx-auto" style="height: 15rem" src="{{ asset('img/Logo-Atilio2.png') }}" alt="">
-                    </div>
+                    Busqueda de Producto
                 </div>
 
-        
+             <!--    <div class="links">
+                    <a href="https://laravel.com/docs">Documentation</a>
+                    <a href="https://laracasts.com">Laracasts</a>
+                    <a href="https://laravel-news.com">News</a>
+                    <a href="https://forge.laravel.com">Forge</a>
+                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                </div> -->
             </div>
         </div>
     </body>

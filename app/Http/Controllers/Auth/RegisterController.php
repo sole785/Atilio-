@@ -28,7 +28,11 @@ class RegisterController extends Controller
      *
      * @var string
      */
+<<<<<<< HEAD
     protected $redirectTo = '/productos'; //redireccionar a /mail cuando se solucione el problema del registro
+=======
+    protected $redirectTo = '/home';
+>>>>>>> parent of 77f2aab... 1
 
     /**
      * Create a new controller instance.
@@ -55,8 +59,6 @@ class RegisterController extends Controller
             'telefono'=> 'required|max:10',
             'celular'=> 'required|max:12',
             'password' => 'required|string|min:6|confirmed',
-            'direccion'=>'required|string|max:100',
-            'email'=>'required|string|max:100',
         ]);
     }
 
@@ -75,8 +77,6 @@ class RegisterController extends Controller
             'telefono' => $data['telefono'],
             'celular' => $data['celular'],
             'password' => Hash::make($data['password']),
-            'direccion' => $data['direccion'],
-            'email' => $data['email'],
         ]);
     }
 }
